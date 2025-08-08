@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.05">
+    <title>Autoevaluación de Emprendimiento - EmprendeYA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        :root {
+            --primario: #2c7a7b;
+            --secundario: #38b2ac;
+            --fondo: #f9f9f9;
+            --texto: #333;
+            --boton: #ff7e5f;
+            --boton-hover: #eb5e3b;
+        }
+
+        body {
+            background: var(--fondo);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primario);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.8em;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--secundario);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--primario);
+        }
+
+        form ol {
+            padding-left: 20px;
+        }
+
+        form li {
+            margin-bottom: 15px;
+        }
+
+        button {
+            background: var(--boton);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background: var(--boton-hover);
+        }
+
+        #resultado {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Tarjeta de resultado */
+        .card {
+            padding: 20px;
+            border-radius: 8px;
+            background: #e6fffa;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .card strong {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primario);
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .footer-c {
+            text-align: center;
+        }
+
+        .footer-c .link a {
+            color: white;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+
+        .footer-c .link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                margin: 20px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <header id="inicio">
+        <h1>EmprendeYA</h1>
+        <nav>
+           <a href="#inicio">Inicio</a>
+            <a href="#que-es">¿Qué es?</a>
+            <a href="#colombia">Colombia</a>
+            <a href="#motivos">Motivos</a>
+            <a href="formulario.html">Formulario</a>
+            <a href="Emprendimiento.html">Emprendimiento</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <h1>Autoevaluación de Emprendimiento</h1>
+        <p style="text-align:center;">Responde Sí o No a las siguientes preguntas.</p>
+
+        <form id="form-emprendimiento">
+            <ol>
+                <li>¿Tienes una idea de negocio definida? <br>
+                    <input type="radio" name="q1" value="Si"> Sí
+                    <input type="radio" name="q1" value="No"> No
+                </li>
+                <li>¿Has validado tu idea con potenciales clientes? <br>
+                    <input type="radio" name="q2" value="Si"> Sí
+                    <input type="radio" name="q2" value="No"> No
+                </li>
+                <li>¿Tienes un plan básico (objetivos y pasos)? <br>
+                    <input type="radio" name="q3" value="Si"> Sí
+                    <input type="radio" name="q3" value="No"> No
+                </li>
+                <li>¿Conoces a tu cliente ideal? <br>
+                    <input type="radio" name="q4" value="Si"> Sí
+                    <input type="radio" name="q4" value="No"> No
+                </li>
+                <li>¿Has lanzado al menos una versión mínima de tu producto/servicio? <br>
+                    <input type="radio" name="q5" value="Si"> Sí
+                    <input type="radio" name="q5" value="No"> No
+                </li>
+                <li>¿Tienes una forma clara de generar ingresos? <br>
+                    <input type="radio" name="q6" value="Si"> Sí
+                    <input type="radio" name="q6" value="No"> No
+                </li>
+                <li>¿Has pensado en precios y costes? <br>
+                    <input type="radio" name="q7" value="Si"> Sí
+                    <input type="radio" name="q7" value="No"> No
+                </li>
+                <li>¿Buscas activamente retroalimentación? <br>
+                    <input type="radio" name="q8" value="Si"> Sí
+                    <input type="radio" name="q8" value="No"> No
+                </li>
+                <li>¿Estás dispuesto a iterar y mejorar el producto? <br>
+                    <input type="radio" name="q9" value="Si"> Sí
+                    <input type="radio" name="q9" value="No"> No
+                </li>
+                <li>¿Tienes una red de apoyo (mentores, colegas)? <br>
+                    <input type="radio" name="q10" value="Si"> Sí
+                    <input type="radio" name="q10" value="No"> No
+                </li>
+            </ol>
+            <div style="text-align:center; margin-top: 20px;">
+                <button type="submit">Enviar y obtener diagnóstico</button>
+            </div>
+        </form>
+
+        <div id="resultado"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-c">
+            <p>&copy; 2025 EmprendeYA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.getElementById("form-emprendimiento");
+            const resultadoDiv = document.getElementById("resultado");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                let totalSi = 0;
+                let totalNo = 0;
+
+                for (let i = 1; i <= 10; i++) {
+                    const respuesta = form.querySelector(`input[name="q${i}"]:checked`);
+                    if (respuesta) {
+                        if (respuesta.value === "Si") {
+                            totalSi++;
+                        } else {
+                            totalNo++;
+                        }
+                    }
+                }
+
+                let mensaje = "";
+                if (totalSi >= 8) {
+                    mensaje = "🚀 ¡Excelente! Tienes un perfil emprendedor muy fuerte. Estás listo para llevar tu idea al siguiente nivel.";
+                } else if (totalSi >= 5) {
+                    mensaje = "💡 Buen trabajo. Tienes una base sólida, pero aún hay áreas por mejorar antes de lanzarte al mercado.";
+                } else {
+                    mensaje = "📈 Aún necesitas trabajar en tu idea y estrategia. No te desanimes, todo gran emprendimiento empieza con pequeños pasos.";
+                }
+
+                resultadoDiv.innerHTML = `
+                    <div class="card">
+                        <p>✅ Respuestas 'Sí': ${totalSi}</p>
+                        <p>❌ Respuestas 'No': ${totalNo}</p>
+                        <strong>${mensaje}</strong>
+                    </div>
+                `;
+            });
+        });
+    </script>
+</body>
+</html>

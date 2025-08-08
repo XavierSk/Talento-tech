@@ -1,0 +1,835 @@
+:root {
+  --color-principal: #D62828;
+  --color-secundario: #007C91;
+  --color-fondo-suave: #DFF6F3;
+  --color-oscuro: #023047;
+  --color-claro: #ffffff;
+  --fuente-titulo: 'Lobster', cursive;
+  --fuente-base: 'Open Sans', sans-serif;
+}
+
+/* Cuerpo */
+body {
+  margin: 0;
+  font-family: var(--fuente-base);
+  background-color: var(--color-fondo-suave);
+  color: var(--color-oscuro);
+}
+
+.navbar {
+  background-color: #002B3D;
+  padding: 20px 40px;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.logo span {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #FFD700; /* dorado */
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.nav-links li a:hover {
+  color: #FFD700;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+}
+/* HERO */
+.hero {
+  background-image: url('/img/Comida-tipica-de-la-region-pacifica-de-Colombia.png'); /* Cambiar cuando tengas una imagen atractiva */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  background-color: rgba(115, 135, 145, 0.329);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  font-family: var(--fuente-titulo);
+  color: var(--color-claro);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: var(--color-principal);
+  color: var(--color-claro);
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a51818;
+}
+
+/* Sección de platos */
+.destacados {
+  padding: 50px 20px;
+  background-color: var(--color-claro);
+  text-align: center;
+}
+
+.platos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.plato {
+  width: 300px;
+  background-color: var(--color-fondo-suave);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.plato img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.plato h3 {
+  color: var(--color-principal);
+  font-family: var(--fuente-titulo);
+  margin: 10px 0 5px;
+}
+
+.plato p {
+  padding: 0 15px 15px;
+}
+
+/* Nosotros */
+.nosotros {
+  background-color: var(--color-fondo-suave);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.nosotros h2 {
+  font-family: var(--fuente-titulo);
+  color: var(--color-principal);
+}
+
+footer {
+  background-color: var(--color-oscuro);
+  color: var(--color-claro);
+  text-align: center;
+  padding: 20px;
+}
+footer {
+  background-color: #023047;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo {
+  flex: 1 1 200px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 100px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.footer-logo p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 8px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #D62828;
+}
+
+.footer-links, .footer-contact {
+  flex: 1 1 200px;
+  margin-bottom: 20px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: #D62828;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 6px;
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #D62828;
+}
+
+.footer-contact p i {
+  margin-right: 8px;
+  color: #D62828;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 13px;
+}
+.menu-header {
+  background-color: #e0f2f1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.menu-header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  color: #d32f2f;
+  margin: 0;
+}
+
+.menu-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.menu-container {
+  padding: 40px 20px;
+}
+
+.menu-container section {
+  margin-bottom: 50px;
+}
+
+.menu-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00695c;
+  display: block;
+  margin: 10px, auto;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.menu-item h3 {
+  margin: 0 0 10px;
+  color: #00796b;
+  display: block;
+  margin: 10px, auto;
+}
+
+.menu-item p {
+  margin: 0;
+  color: #555;
+}
+.menu-item {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.03);
+}
+
+.menu-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+/* === TESTIMONIOS === */
+.testimonios {
+  background-color: #f0f8ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.testimonios h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #014d4d;
+}
+.testimonios-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.testimonio {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.testimonio p {
+  font-style: italic;
+  color: #333;
+}
+.testimonio h4 {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #014d4d;
+}
+
+/* Responsive para testimonios */
+@media (min-width: 768px) {
+  .testimonios-grid {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .testimonio {
+    width: 30%;
+  }
+}
+
+/* === BOTÓN WHATSAPP FLOTANTE === */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+.reservas {
+  background-color: #e0f7fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+.reservas h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #014d4d;
+}
+.form-reserva {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.form-reserva input,
+.form-reserva button {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.form-reserva button {
+  background-color: #014d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.form-reserva button:hover {
+  background-color: #016666;
+}
+#mensaje-reserva {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #014d4d;
+}
+/* === MENÚ DE PLATOS === */
+.menu-header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f3f9f6;
+  color: #0d3b2e;
+}
+
+.menu-header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.menu-container {
+  padding: 2rem;
+}
+
+.menu-container section {
+  margin-bottom: 3rem;
+}
+
+.menu-container h2 {
+  font-size: 2rem;
+  color: #0d3b2e;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+  display: block;
+  margin: 10px, auto;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.menu-item {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.menu-item h3 {
+  font-size: 1.4rem;
+  margin: 0.5rem 1rem;
+  color: #0d3b2e;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  margin: 0 1rem;
+  color: #555;
+}
+
+.menu-item .precio {
+  font-weight: bold;
+  color: #0d3b2e;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.btn-pedir {
+  background-color: #0d3b2e;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 10px, auto;
+}
+
+.btn-pedir:hover {
+  background-color: #138f68;
+  display: block;
+  margin: 10px, auto;
+}
+.menu-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 15px;
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-img-container {
+  position: relative;
+}
+
+.menu-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff6600;
+  color: #fff;
+  padding: 5px 8px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.precio {
+  font-weight: bold;
+  color: #ff6600;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.btn-pedir {
+  display: inline-block;
+  background: #25d366;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  display: block;
+  margin: 10px, auto;
+}
+
+.btn-pedir:hover {
+  background: #1ebe5d;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .menu-img {
+    height: 150px;
+  }
+}
+/* Carrito flotante */
+.carrito-flotante {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ff6600;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.carrito-flotante span {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #000;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.cerrar {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#listaCarrito {
+  list-style: none;
+  padding: 0;
+}
+
+#listaCarrito li {
+  margin-bottom: 5px;
+}
+/* ===== Estilos carrito flotante ===== */
+.carrito-btn{
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  background: #ff9800;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+#cartCount{
+  display:inline-block;
+  margin-left:6px;
+  background:#012b2b;
+  color:white;
+  padding:2px 6px;
+  border-radius:12px;
+  font-size:12px;
+}
+
+/* Panel del carrito (oculto a la derecha) */
+.cart-panel{
+  position: fixed;
+  top: 0;
+  right: -360px;     /* oculto inicialmente */
+  width: 360px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -6px 0 18px rgba(0,0,0,0.2);
+  padding: 18px;
+  transition: right 0.28s ease;
+  z-index: 1999;
+  overflow-y:auto;
+}
+
+.cart-panel.open{
+  right: 0;
+}
+
+.close-cart{
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  float: right;
+  cursor:pointer;
+}
+
+/* Lista y botones */
+#cartItems { list-style:none; padding:0; margin: 12px 0; }
+#cartItems li { display:flex; justify-content:space-between; gap:8px; margin-bottom:8px; align-items:center; }
+.cart-remove {
+  background: #e74c3c; color:#fff; border: none; padding:4px 8px; border-radius:6px; cursor:pointer; font-size:12px;
+}
+.btn-pedir {
+  display:block;
+  text-align:center;
+  background:#25D366;
+  color:white;
+  padding:10px 12px;
+  border-radius:8px;
+  text-decoration:none;
+  margin-top:8px;
+  display: block;
+  margin: 10px, auto;
+}
+.btn-clear{
+  display:block;
+  margin-top:8px;
+  width:100%;
+  padding:8px;
+  background:#d9534f;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+.btn-add.added {
+  background-color: #4CAF50 !important;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  display: block;
+  margin: 10px, auto;
+}
+.card button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: block;
+  margin: 15px auto 0;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+.video-antojo {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.video-antojo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-overlay h2 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  padding: 10px;
+}
+
+

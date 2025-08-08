@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú - Aura del Sabor</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/logo.jpg" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <img src="img/logo.jpg" alt="Aura del Sabor">
+          <span>Aura del Sabor</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="Index.html">Inicio</a></li>
+          <li><a href="menu.html" class="active">Menú</a></li>
+          <li><a href="Galeria.html">Galería</a></li>
+          <li><a href="Nosotros.html">Nosotros</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ENCABEZADO DE MENÚ -->
+  <section class="menu-header">
+    <h1>Menú de Aura del Sabor</h1>
+    <p>Disfruta de nuestros sabores del Pacífico colombiano</p>
+  </section>
+
+  <!-- CONTENIDO DEL MENÚ -->
+  <main class="menu-container">
+    <section>
+      <h2>Entradas</h2>
+      <div class="menu-grid" id="entradas"></div>
+    </section>
+
+    <section>
+      <h2>Platos fuertes</h2>
+      <div class="menu-grid" id="platos"></div>
+    </section>
+
+    <section>
+      <h2>Bebidas</h2>
+      <div class="menu-grid" id="bebidas"></div>
+    </section>
+
+    <section>
+      <h2>Postres</h2>
+      <div class="menu-grid" id="postres"></div>
+    </section>
+  </main>
+
+  <!-- CARRITO FLOTANTE -->
+  <div class="carrito-flotante" id="carritoBtn">
+    <i class="bi bi-cart"></i>
+    <span id="carritoContador">0</span>
+  </div>
+
+  <!-- MODAL DEL CARRITO -->
+  <div class="modal" id="modalCarrito">
+    <div class="modal-contenido">
+      <span class="cerrar" id="cerrarModal">&times;</span>
+      <h2>Tu pedido</h2>
+      <ul id="listaCarrito"></ul>
+      <p><strong>Total:</strong> $<span id="totalCarrito">0</span></p>
+      <a id="btnEnviarPedido" href="#" target="_blank" class="btn-pedir">
+        <i class="bi bi-whatsapp"></i> Enviar pedido por WhatsApp
+      </a>
+    </div>
+  </div>
+  <script src="js/menu_carrito.js"></script>
+</body>
+</html>

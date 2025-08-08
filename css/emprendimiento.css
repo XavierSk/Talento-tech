@@ -1,0 +1,146 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Colores base */
+:root {
+    --primario: #2c7a7b;
+    --secundario: #38b2ac;
+    --fondo: #f9f9f9;
+    --texto: #333;
+    --boton: #ff7e5f;
+    --boton-hover: #eb5e3b;
+}
+
+/* Header */
+header {
+    background: var(--primario);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+
+nav a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secundario);
+}
+
+/* Imágenes */
+.img {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Secciones */
+section {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    color: var(--primario);
+    margin-bottom: 10px;
+}
+
+section dd,
+section ol {
+    color: var(--texto);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Lista numerada */
+ol li {
+    margin-bottom: 5px;
+}
+
+/* Botón VER MÁS */
+.ver {
+    display: inline-block;
+    background: var(--boton);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.ver:hover {
+    background: var(--boton-hover);
+}
+
+/* Footer */
+.footer {
+    background: var(--primario);
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-c .link {
+    margin-top: 10px;
+}
+
+.footer-c .link a {
+    color: white;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
+.footer-c .link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}

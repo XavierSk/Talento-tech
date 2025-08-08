@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.05">
+    <title>EmprendeYA</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        :root {
+            --primario: #2c7a7b;
+            --secundario: #38b2ac;
+            --fondo: #f9f9f9;
+            --texto: #333;
+            --boton: #ff7e5f;
+            --boton-hover: #eb5e3b;
+        }
+
+        header {
+            background: var(--primario);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.8em;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--secundario);
+        }
+
+        /* Secciones con imagen y texto */
+        .seccion {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            gap: 20px;
+        }
+
+        .seccion img {
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .seccion .texto {
+            width: 55%;
+            color: var(--texto);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .seccion h2 {
+            color: var(--primario);
+            margin-bottom: 10px;
+        }
+
+        .ver {
+            display: inline-block;
+            background: var(--boton);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .ver:hover {
+            background: var(--boton-hover);
+        }
+
+        /* Reto final */
+        .reto {
+            background: var(--secundario);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .reto h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .reto p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .reto a {
+            background: var(--boton);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .reto a:hover {
+            background: var(--boton-hover);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primario);
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .footer-c {
+            text-align: center;
+        }
+
+        .footer-c .link a {
+            color: white;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+
+        .footer-c .link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .seccion {
+                flex-direction: column;
+            }
+
+            .seccion img,
+            .seccion .texto {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="inicio">
+        <h1>EmprendeYA</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#que-es">¿Qué es?</a>
+            <a href="#colombia">Colombia</a>
+            <a href="#motivos">Motivos</a>
+            <a href="formulario.html">Formulario</a>
+            <a href="Emprendimiento.html">Emprendimiento</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ¿Qué es? -->
+        <section class="seccion" id="que-es">
+            <img src="img/emprendimiento.png" alt="Imagen emprendimiento">
+            <div class="texto">
+                <h2>¿QUÉ ES EMPRENDIMIENTO?</h2>
+                <p>
+                    El emprendimiento es la capacidad de una persona o grupo para crear y desarrollar un negocio o proyecto con el objetivo de generar valor económico y social.
+                </p>
+                <a class="ver" href="https://www.ebc.mx/ventana/emprendimiento-que-es-y-para-que-sirve/" target="_blank" rel="noreferrer">VER MÁS</a>
+            </div>
+        </section>
+
+        <!-- Colombia -->
+        <section class="seccion" id="colombia">
+            <div class="texto">
+                <h2>¿EMPRENDIMIENTO EN COLOMBIA?</h2>
+                <p>
+                    En Colombia, el emprendimiento es una fuente de innovación y desarrollo económico. Las nuevas ideas impulsan la economía y fomentan la generación de empleo.
+                </p>
+                <a class="ver" href="https://pca.edu.co/wp/hola-mundo-3-2/" target="_blank" rel="noreferrer">VER MÁS</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72" alt="Imagen Colombia emprendimiento">
+        </section>
+
+        <!-- Motivos -->
+        <section class="seccion" id="motivos">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Imagen motivos para emprender">
+            <div class="texto">
+                <h2>LOS PRINCIPALES MOTIVOS PARA EMPRENDER</h2>
+                <ol type="I">
+                    <li>Más libertad en tu vida</li>
+                    <li>Perseguir tus sueños</li>
+                    <li>Oportunidad de crecimiento económico</li>
+                    <li>Aprendizaje constante</li>
+                    <li>Impactar positivamente tu entorno</li>
+                </ol>
+                <a class="ver" href="https://www.bbva.com/es/innovacion/cinco-motivos-para-emprender-y-crear-un-negocio-con-exito/" target="_blank" rel="noreferrer">VER MÁS</a>
+            </div>
+        </section>
+
+        <!-- Reto final -->
+        <section class="reto">
+            <h2>💡 ¿Estás listo para emprender?</h2>
+            <p>Descubre tu nivel de emprendimiento respondiendo nuestro formulario interactivo.</p>
+            <a href="formulario.html">¡QUIERO SABER MI NIVEL!</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-c">
+            <p>&copy; 2025 EmprendeYA. Todos los derechos reservados.</p>
+            <div class="link">
+                <a href="#inicio">Inicio</a>
+                <a href="#que-es">¿Qué es?</a>
+                <a href="#colombia">Colombia</a>
+                <a href="#motivos">Motivos</a>
+                <a href="formulario.html">Formulario</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
